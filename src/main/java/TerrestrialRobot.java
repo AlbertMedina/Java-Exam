@@ -20,8 +20,8 @@ public class TerrestrialRobot extends Robot implements ResistanceEvaluable {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", using " + tractionType.toString().toLowerCase() + " traction, up to " + maxSpeed + " km/h";
+    public String getTechnicalDescription() {
+        return super.getTechnicalDescription() + ", using " + tractionType.toString().toLowerCase() + " traction, up to " + maxSpeed + " km/h";
     }
 
     @Override

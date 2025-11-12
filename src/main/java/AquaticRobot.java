@@ -20,7 +20,7 @@ public class AquaticRobot extends Robot {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", using " + propulsionSystem.toString().toLowerCase() + " propulsion, up to " + maxDepth + " m depth";
+    public String getTechnicalDescription() {
+        return super.getTechnicalDescription() + ", using " + propulsionSystem.toString().toLowerCase() + " propulsion, up to " + maxDepth + " m depth";
     }
 }

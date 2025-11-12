@@ -20,8 +20,8 @@ public class AerialRobot extends Robot implements ResistanceEvaluable {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", can fly up to " + maxAltitude + " m during " + flightRange + " minutes";
+    public String getTechnicalDescription() {
+        return super.getTechnicalDescription() + ", can fly up to " + maxAltitude + " m during " + flightRange + " minutes";
     }
 
     @Override

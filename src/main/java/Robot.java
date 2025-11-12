@@ -30,8 +30,7 @@ public abstract class Robot {
         return registrationDate;
     }
 
-    @Override
-    public String toString() {
+    public String getTechnicalDescription() {
         return name + " by " + manufacturer + " (" + manufactureYear + "), registered " + registrationDate;
     }
 }
