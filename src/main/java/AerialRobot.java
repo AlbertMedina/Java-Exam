@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class AerialRobot extends Robot {
+public class AerialRobot extends Robot implements ResistanceEvaluable {
 
     private final double maxAltitude;
     private final double flightRange;
@@ -22,5 +22,10 @@ public class AerialRobot extends Robot {
     @Override
     public String toString() {
         return super.toString() + ", can fly up to " + maxAltitude + " m during " + flightRange + " minutes";
+    }
+
+    @Override
+    public String getResistanceReport() {
+        return getName() + " is " + ((getFlightRange() > 60) ? "eligible" : "not eligible") + " for extreme competition";
     }
 }

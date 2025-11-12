@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -46,5 +47,15 @@ public class RobotService {
 
     public List<Robot> getRobotsByManufacturer(String manufacturer) {
         return robotRepository.getRobots().stream().filter(r -> r.getManufacturer().equalsIgnoreCase(manufacturer)).toList();
+    }
+
+    public List<ResistanceEvaluable> getResistanceEvaluableRobots() {
+        List<ResistanceEvaluable> resistanceEvaluableRobots = new ArrayList<>();
+        for (Robot r : robotRepository.getRobots()) {
+            if (r instanceof ResistanceEvaluable re) {
+                resistanceEvaluableRobots.add(re);
+            }
+        }
+        return resistanceEvaluableRobots;
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class TerrestrialRobot extends Robot {
+public class TerrestrialRobot extends Robot implements ResistanceEvaluable {
 
     private final double maxSpeed;
     private final TractionType tractionType;
@@ -22,5 +22,10 @@ public class TerrestrialRobot extends Robot {
     @Override
     public String toString() {
         return super.toString() + ", using " + tractionType.toString().toLowerCase() + " traction, up to " + maxSpeed + " km/h";
+    }
+
+    @Override
+    public String getResistanceReport() {
+        return getName() + " is " + ((getTractionType() == TractionType.CRAWLER) ? "eligible" : "not eligible") + " for extreme competition";
     }
 }

@@ -21,5 +21,10 @@ public class Main {
 
         System.out.println("Robots by Robots SL:");
         robotService.getRobotsByManufacturer("Robots SL").forEach(System.out::println);
+
+        System.out.println();
+
+        ResistanceReportPrinter resistanceReportPrinter = new ResistanceReportPrinter();
+        resistanceReportPrinter.printReport(robotService.getResistanceEvaluableRobots());
     }
 }
