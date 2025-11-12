@@ -2,10 +2,10 @@ import java.util.Date;
 
 public abstract class Robot {
 
-    private String name;
-    private String manufacturer;
-    private int manufactureYear;
-    private Date registrationDate;
+    private final String name;
+    private final String manufacturer;
+    private final int manufactureYear;
+    private final Date registrationDate;
 
     public Robot(String name, String manufacturer, int manufactureYear, Date registrationDate) {
         this.name = name;
