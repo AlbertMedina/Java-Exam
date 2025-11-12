@@ -18,4 +18,9 @@ public class TerrestrialRobot extends Robot {
     public TractionType getTractionType() {
         return tractionType;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", using " + tractionType.toString().toLowerCase() + " traction, up to " + maxSpeed + " km/h";
+    }
 }

@@ -18,4 +18,9 @@ public class AerialRobot extends Robot {
     public double getFlightRange() {
         return flightRange;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", can fly up to " + maxAltitude + " m during " + flightRange + " minutes";
+    }
 }
